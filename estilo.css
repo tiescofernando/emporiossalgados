@@ -1,0 +1,749 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gabarito:wght@400..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --cor: rgb(255, 170, 78);
+    --cor1: rgba(239, 135, 23, 0.94);
+    --cor2: #e20400;
+    --cor3: #feff0e;
+    --cor4: rgb(255, 52, 91);
+    --cor5: #006de2;
+    --cor6: #7500e2;
+    --font: "Bebas Neue", serif;
+    --font1: "Karla", serif;
+    --font2: "Roboto", serif;
+    --font3: "Gabarito", serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font1);
+    font-style: normal;
+}
+
+/*cabeçalho*/
+.cabecalho {
+    width: 100%;
+    height: 800px;
+    background-image: url(img/buffet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid transparent;
+}
+
+@media (max-width: 500px) {
+    .cabecalho {
+        margin-top: 150px;
+    }
+}
+
+.cabecalho h4 {
+    text-align: center;
+    color: var(--cor1);
+    margin-top: 30px;
+    padding: 36px;
+    letter-spacing: 1.9px;
+    text-shadow: 1px 0 0 rgba(255, 255, 255, .6)
+}
+
+.cabecalho h1 {
+    margin: 37px;
+    color: white;
+    text-shadow: 1px 1px #000;
+    font-family: var(--font);
+    font-size: 87px;
+    letter-spacing: 3.5px;
+}
+
+@media (min-width: 500px) {
+
+    .cabecalho h1 {
+        font-size: 70px;
+        text-align: center;
+    }
+}
+
+/*Alinhamento*/
+.main-column {
+    margin-left: 30%;
+}
+
+/*menu*/
+.logo {
+    max-width: 100px;
+    margin: 30px 30%;
+}
+
+.menu {
+    position: fixed;
+    height: 100%;
+    width: 30%;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 500px) {
+    .main-column {
+        margin: auto;
+    }
+
+    .menu {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+        display: flex;
+        background-color: white;
+    }
+
+    .menu img {
+        margin: 15px 4%;
+    }
+
+    .menu nav {
+        margin: 25px -30px;
+    }
+
+    .menu nav ul {
+        line-height: 1.2px;
+    }
+
+    .menu nav ul li a {
+        padding: 4px;
+        font-size: 12px
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+        filter: drop-shadow(1px 1px 1px white);
+    }
+
+}
+
+
+.menu nav ul {
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-top: -5px;
+}
+
+.menu nav ul li {
+    padding-bottom: 15px;
+}
+
+.menu nav ul li a {
+    display: block;
+    font-family: var(--font3);
+    text-decoration: none;
+    color: var(--cor6);
+    letter-spacing: 1.8px;
+    transition: .3s;
+}
+
+.menu nav ul li a:hover {
+    background-image: linear-gradient(95deg, var(--cor1), white 60%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-shadow: 0 1px 1px #000;
+}
+
+
+    .drop-hover {
+        position: relative;
+    }
+
+    .drop-hover .drop {
+        position: absolute;
+        display: grid;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: .4s ease;
+    }
+
+    .drop-hover:hover .drop {
+        border-radius: 5px;
+        padding: 5px -5px;
+        height: 65px;
+        overflow: hidden;
+    }
+
+    .drop-hover:hover {
+        padding-bottom: 75px;
+    }
+
+    .drop-hover .drop a {
+        padding: 10px;
+    }
+
+
+
+
+/*Primeira sessão*/
+
+.column-one {
+    display: grid;
+    grid-template-areas: "qld qld cook";
+    height: 600px;
+}
+
+@media (max-width: 500px) {
+    .column-one {
+        display: inline-block;
+        height: 300px;
+    }
+}
+
+.qualidade {
+    grid-area: qld;
+    background-color: var(--cor1);
+    padding: 50px;
+}
+
+.qualidade h3 {
+    color: var(--cor3);
+    text-transform: capitalize;
+    letter-spacing: 2.3px;
+    font-size: 25px;
+}
+
+.qualidade h1 {
+    color: white;
+    font-size: 52px;
+    text-transform: uppercase;
+    font-family: var(--font);
+    word-spacing: 21px;
+    line-height: 1.3;
+    letter-spacing: 5.6px
+}
+
+.qualidade p {
+    color: var(--cor2);
+    font-family: var(--font3);
+    text-align: justify;
+    font-size: 18px;
+    margin-top: -26px;
+}
+
+.img-txt-cook {
+    grid-area: cook;
+    background-image: url(img/self-cozinha.jpg);
+    background-repeat: no-repeat;
+    background-size: calc(300%);
+    background-position: center;
+    transition: .9s;
+}
+
+@media (max-width: 550px) {
+    .img-txt-cook {
+        background-size: calc(100%);
+    }
+
+    #txt-lanche {
+        font-size: 45px;
+    }
+}
+
+.img-txt-cook:hover {
+    background-size: calc(320%);
+}
+
+.img-txt {
+    font-family: var(--font);
+    font-size: 49px;
+    color: white;
+    text-shadow: 1px 2px 1px #000;
+    padding: 35px 20px;
+}
+
+.img-txt p:before {
+    content: '\0020\0020\0020\201c';
+    font-size: 80px;
+}
+
+.img-txt p:after {
+    content: '\0020\0020\0020\201d';
+    font-size: 80px;
+}
+
+#txt-lanche {
+    margin: 176px 20px 10px;
+}
+
+
+.column-two {
+    display: grid;
+    grid-template-columns: 265px;
+    grid-template-areas:
+        "niver empresa pedido";
+    height: 516px
+}
+
+
+.img-txt-niver {
+    grid-area: niver;
+    background-image: url(img/aniversario.jpg);
+    background-size: calc(380%);
+    background-repeat: no-repeat;
+    background-position: calc(52% - 10px);
+    transition: .9s;
+}
+
+
+
+.img-txt-niver:hover {
+    background-size: calc(390%);
+}
+
+#txt-salgado {
+    margin: 12px;
+    line-height: 38px;
+    font-size: 38px;
+}
+
+.img-txt-emp {
+    grid-area: empresa;
+    background-image: url(img/empresa.webp);
+    background-position: center;
+    background-size: calc(300%);
+    transition: 0.9s;
+}
+
+
+    .img-txt-emp {
+        background-size: calc(300%)
+    }
+
+    .img-txt-emp:hover {
+        background-size: calc(310%);
+    }
+
+    .img-txt-emp p {
+        margin-top: 122px;
+        line-height: 1.1em;
+    }
+
+    .pdd {
+        grid-area: pedido;
+        color: white;
+        background-color: var(--cor2);
+    }
+
+    .pdd h1 {
+        overflow-wrap: anywhere;
+        font-size: 45px;
+        margin: 15px;
+        font-family: var(--font);
+    }
+
+    .pdd p {
+        font-family: var(--font3);
+        margin: 10px;
+    }
+
+
+  
+    .grid-three {
+        display: grid;
+        grid-template-areas: "reuniao tarde";
+        width: 100%;
+        height: 240px;
+    }
+    
+    .img-txt-ass {
+        grid-area: reuniao;
+        background-image: url(img/reuniao.jpg);
+        background-size: calc(190%);
+        transition: 0.9s;
+    }
+
+    .img-txt-ass {
+        background-size: calc(130%);
+    }
+  
+
+    .img-txt-ass:hover {
+        background-size: calc(140%);
+    }
+
+    .img-txt-ass p {
+        margin-top: 121px;
+        margin-bottom: 17px;
+    }
+
+    .img-txt-tarde {
+        grid-area: tarde;
+        background-image: url(img/tarde.jpg);
+        background-size: calc(120%);
+        background-position: center top;
+        transition: .9s;
+    }
+    
+
+    .img-txt-tarde:hover {
+        background-size: calc(130%);
+    }
+
+    .img-txt-tarde p {
+        margin-top: -30px;
+    }
+
+    /*Segundo cabeçalho*/
+    .apresentacao {
+        background-image: url(img/cento2.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 380px;
+        position: relative;
+    }
+
+    .img-emp {
+        background-image: url(img/logo-or.png);
+        background-size: contain;
+        /* Ajusta a imagem para caber no contêiner */
+        background-repeat: no-repeat;
+        /* Evita repetição da imagem */
+        width: 270px;
+        /* Defina a largura desejada */
+        height: 270px;
+        /* Defina a altura desejada */
+        position: absolute;
+        /* Posiciona a logo de forma absoluta */
+        top: 50%;
+        /* Centraliza verticalmente */
+        left: 50%;
+        /* Centraliza horizontalmente */
+        transform: translate(-50%, -50%);
+        /* Ajusta a posição para centralizar */
+        z-index: 2;
+        /* Garante que a logo fique acima da imagem de fundo */
+        filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 1));
+    }
+
+    .article-app {
+        background-color: var(--cor1);
+        padding: 15px;
+        text-align: justify;
+        text-shadow: 1px 1px 2px black;
+        color: white;
+        display: flexbox;
+        background-image: url(img/coxinhamandioca-semfundo.png);
+        background-repeat: no-repeat;
+        background-position-y: calc(229% - 20px);
+    }
+
+    .article-app h3 {
+        color: var(--cor3);
+        text-align: center;
+        font-family: var(--font);
+        font-size: 25px;
+        letter-spacing: 5px;
+    }
+
+    .article-app h1 {
+        text-align: center;
+        font-family: var(--font3);
+    }
+
+    .article-app p {
+        margin: 40px 58px;
+        line-height: 2;
+        text-indent: 55px;
+        font-size: 15px;
+    }
+
+    .pedido {
+        color: white;
+        background-color: black;
+        margin: 32;
+        text-align: center;
+        height: 380px;
+        border-top: 1px solid transparent;
+    }
+
+    .pedido h3 {
+        letter-spacing: 2px;
+    }
+
+    .pedido h1 {
+        font-size: 36px;
+        font-family: var(--font);
+    }
+
+    .pedido p {
+        margin: 30px;
+        font-size: 20px;
+    }
+
+    .escolha {
+        background-color: var(--cor);
+        color: white;
+        border: 1px solid transparent;
+        text-shadow: 1px 0 1px rgba(0, 0, 0, 0.49);
+    }
+
+    .escolha h3 {
+        text-align: center;
+        color: var(--cor3);
+        font-family: var(--font2);
+    }
+
+    .escolha h1 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .escolha p {
+        margin: 55px;
+        line-height: 1.6;
+    }
+
+    table {
+        margin: -25px 80px 45px;
+    }
+
+    th {
+        font-size: 20px;
+    }
+
+    th:before {
+        content: '\0020\0020\0020\002713';
+        font-size: 50px;
+        color: var(--cor1);
+    }
+
+    td {
+        padding: 5px 25px;
+    }
+
+    .tipos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 250px);
+        color: white;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.67);
+    }
+
+    @media (max-width: 500px) {
+        .tipos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .tipos h4 {
+        font-family: var(--font);
+        margin-top: 175px;
+        color: var(--cor)
+    }
+
+    .tipos h3 {
+        font-family: var(--font3);
+        margin: -20px;
+        letter-spacing: 4px;
+    }
+
+    #esfiha-f {
+        background-image: url(img/esfiha-f.jpeg);
+        background-size: calc(150%);
+        background-position: center;
+        transition: 0.9s;
+    }
+
+    #esfiha-f:hover {
+        background-size: calc(160%);
+    }
+
+    #esfiha-c {
+        background-image: url(img/esfiha-c.jpeg);
+        background-size: calc(150%);
+        background-position: center;
+        transition: 0.9s;
+    }
+
+    #esfiha-c:hover {
+        background-size: calc(160%);
+    }
+
+    #risoles-c {
+        background-image: url(img/risole-c.jpg);
+        background-size: calc(150%);
+        background-position: center;
+        transition: 0.9s;
+    }
+
+    #risoles-c:hover {
+        background-size: calc(160%);
+    }
+
+    #empada-f {
+        background-image: url(img/empada-f.jpg);
+        background-size: calc(100%);
+        transition: .9s;
+    }
+
+    #empada-f:hover {
+        background-size: calc(110%);
+    }
+
+
+    #enroladinho {
+        background-image: url(img/enroladinho-p.jpg);
+        background-size: calc(150%);
+        transition: .9s;
+    }
+
+    #enroladinho:hover {
+        background-size: calc(160%);
+    }
+
+    #kibe {
+        background-image: url(img/kibe.jpeg);
+        background-size: calc(150%);
+        transition: .9s;
+    }
+
+    #kibe:hover {
+        background-size: calc(160%);
+    }
+
+    .contato {
+        background-color: var(--cor1);
+        border: 1px solid rgba(0, 0, 0, 0);
+        text-align: center;
+    }
+
+    .contato h4 {
+        color: var(--cor3);
+        letter-spacing: 5px;
+        font-family: var(--font3);
+        margin: 25px;
+    }
+
+    .contato h1 {
+        font-size: 30px;
+        margin: 10px
+    }
+
+    .contato p {
+        font-family: var(--font1);
+
+    }
+
+    .maps {
+        display: inline-block;
+        background-color: white;
+        padding: 40px 90px;
+        margin: 65px 70px;
+    }
+
+    @media (max-width: 500px) {
+        .maps {
+            width: 150px;
+            padding: 20px 30px;
+            margin: 30px 40px;
+        }
+    }
+
+    .maps strong {
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    .maps address {
+        font-family: var(--font2);
+        line-height: 1.6;
+    }
+
+    .maps a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #address-maps {
+        color: var(--cor1);
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+
+    footer {
+        background-color: black;
+        z-index: 1;
+        height: 300px;
+        margin-left: 30%;
+        margin-top: -250px;
+    }
+
+    @media (max-width: 500px) {
+        footer {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    #tel:before {
+        content: '\002706\0020\0020\0020';
+        color: black;
+        font-weight: 600;
+    }
+
+    .buttom {
+        display: inline-block;
+        margin: 25px;
+        padding: 15px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.37);
+    }
+
+    .buttom a {
+        text-decoration: none;
+        color: black;
+        font-family: var(--font);
+    }
+
+    /*Responsividade */
+@media screen and (max-width: 600px){
+    
+    .img-txt-niver {
+    background-size: calc(150%);
+    height: 250px
+    }
+
+    #txt-salgado {
+    padding: 65px 2px;
+    word-spacing: 10px
+    }
+
+    .img-txt {
+    font-size: 39px;
+    }
+
+    .img-txt p:before {
+    font-size: 65px;
+    }
+
+    .img-txt p:after {
+    font-size: 65px;
+    }
+    
+    /*Coluna dois*/
+    .column-two{
+        display: inline;
+    }
+    .img-txt-emp{
+        background-size: calc(100%);
+    }
+    .pdd{
+        border: 1px solid transparent;
+    }
+    .grid-three {
+        display: inline;
+    }
+    .img-txt-tarde{
+        height: 200px;
+    }
+}
